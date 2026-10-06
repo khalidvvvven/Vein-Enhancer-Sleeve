@@ -69,7 +69,7 @@
   letter-spacing: -0.015em;
 }
 
-.swatch figcaption span:last-child {
+.swatch figcaption > span:last-child {
   color: var(--ink-2);
   font-size: 0.9375rem;
 }

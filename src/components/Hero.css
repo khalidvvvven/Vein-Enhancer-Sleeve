@@ -358,7 +358,7 @@
   letter-spacing: -0.01em;
 }
 
-.callout__label span {
+.callout__label > span {
   font-size: 0.8125rem;
   line-height: 1.35;
   color: var(--ink-2);
@@ -561,6 +561,7 @@
 
   .callout__label {
     left: calc(100% + 8px);
+    max-width: min(200px, calc(100cqi - var(--arm-left) - var(--arm-w) - var(--reach) - 16px));
   }
 
   .callout__label strong {
@@ -568,7 +569,7 @@
   }
 
   /* Short titles only; the mitten keeps its note. */
-  .callout:not(.callout--emphasis) .callout__label span {
+  .callout:not(.callout--emphasis) .callout__label > span {
     display: none;
   }
 

@@ -3,6 +3,7 @@ import { materials } from '../content/site';
 import { Loop } from './Icons';
 import { Picture } from './Picture';
 import './Materials.css';
+import { keepTogether } from './text';
 
 export function Materials() {
   return (
@@ -16,7 +17,7 @@ export function Materials() {
             {materials.title} <em className="accent">{materials.titleAccent}</em>
           </h2>
           <p className="lede" data-reveal style={{ '--d': '100ms' } as CSSProperties}>
-            {materials.lede}
+            {keepTogether(materials.lede)}
           </p>
         </header>
 
@@ -34,8 +35,8 @@ export function Materials() {
                 </div>
                 <figcaption>
                   <span className="mono">Fig. {String(i + 1).padStart(2, '0')}</span>
-                  <strong>{s.title}</strong>
-                  <span>{s.text}</span>
+                  <strong>{keepTogether(s.title)}</strong>
+                  <span>{keepTogether(s.text)}</span>
                 </figcaption>
               </figure>
             </li>

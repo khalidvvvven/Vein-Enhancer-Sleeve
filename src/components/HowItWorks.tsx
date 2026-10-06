@@ -2,6 +2,7 @@ import type { CSSProperties } from 'react';
 import { howItWorks } from '../content/site';
 import { ArmGlyph } from './ArmGlyph';
 import './HowItWorks.css';
+import { keepTogether } from './text';
 
 export function HowItWorks() {
   return (
@@ -33,7 +34,7 @@ export function HowItWorks() {
                 <span className="visually-hidden">Step {i + 1}: </span>
                 {step.title}
               </h3>
-              <p>{step.text}</p>
+              <p>{keepTogether(step.text)}</p>
             </li>
           ))}
         </ol>

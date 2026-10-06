@@ -3,6 +3,7 @@ import { closing } from '../content/site';
 import { ArrowUp } from './Icons';
 import { Picture } from './Picture';
 import './Closing.css';
+import { keepTogether } from './text';
 
 export function Closing() {
   return (
@@ -34,7 +35,7 @@ export function Closing() {
 
         <ul className="closing__summary" aria-label="Key features" data-reveal>
           {closing.summary.map((s) => (
-            <li key={s}>{s}</li>
+            <li key={s}>{keepTogether(s)}</li>
           ))}
         </ul>
 

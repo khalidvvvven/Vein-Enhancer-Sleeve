@@ -2,6 +2,7 @@ import type { CSSProperties } from 'react';
 import { anatomy } from '../content/site';
 import { Picture } from './Picture';
 import './Anatomy.css';
+import { keepTogether } from './text';
 
 export function Anatomy() {
   return (
@@ -49,9 +50,9 @@ export function Anatomy() {
                 <div className="hotspot__label">
                   <strong>
                     <span className="mono">0{f.n}</span>
-                    {f.title}
+                    <span>{keepTogether(f.title)}</span>
                   </strong>
-                  <p>{f.text}</p>
+                  <p>{keepTogether(f.text)}</p>
                 </div>
                 <span className="hotspot__short" aria-hidden="true">
                   {f.short}
@@ -67,8 +68,8 @@ export function Anatomy() {
                   {f.n}
                 </span>
                 <div>
-                  <h3>{f.title}</h3>
-                  <p>{f.text}</p>
+                  <h3>{keepTogether(f.title)}</h3>
+                  <p>{keepTogether(f.text)}</p>
                 </div>
               </li>
             ))}

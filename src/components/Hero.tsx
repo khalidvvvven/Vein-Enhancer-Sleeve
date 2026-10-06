@@ -3,6 +3,7 @@ import { hero } from '../content/site';
 import { ArrowDown } from './Icons';
 import { Picture } from './Picture';
 import './Hero.css';
+import { keepTogether } from './text';
 
 export function Hero() {
   return (
@@ -46,7 +47,7 @@ export function Hero() {
                     <span className="callout__dot" aria-hidden="true" />
                     <span className="callout__line" aria-hidden="true" />
                     <span className="callout__label">
-                      <strong>{c.title}</strong>
+                      <strong>{keepTogether(c.title)}</strong>
                       <span>{c.note}</span>
                     </span>
                   </li>
@@ -72,7 +73,7 @@ export function Hero() {
             {hero.facts.map((f) => (
               <div key={f.label}>
                 <dt className="mono">{f.label}</dt>
-                <dd>{f.value}</dd>
+                <dd>{keepTogether(f.value)}</dd>
               </div>
             ))}
           </dl>

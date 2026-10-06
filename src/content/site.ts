@@ -233,7 +233,7 @@ export const materials = {
     { image: 'detail-fleece', title: 'Fleece body', text: 'Soft brushed fleece wraps the forearm, elbow and upper arm.', alt: 'Close-up of the cream brushed fleece of the sleeve body.' },
     { image: 'detail-pouch', title: 'Heat-pack pocket', text: 'A stitched pouch with a slot opening holds heat packs.', alt: 'Close-up of the stitched fleece pouch with its charcoal-lined slot opening.' },
     { image: 'detail-strap', title: 'Hook-and-loop strap', text: 'An attached strap secures the sleeve at the upper arm.', alt: 'Close-up of the charcoal strap with white hook-and-loop fastening, attached to the sleeve.' },
-    { image: 'detail-cuff', title: 'Ribbed cuff', text: 'Stretch knit cuff with a hook-and-loop patch for a secure fit.', alt: 'Close-up of the ribbed charcoal cuff with its white hook-and-loop patch.' },
+    { image: 'detail-cuff', title: 'Ribbed cuff', text: 'Stretch knit cuff with a hook-and-loop patch.', alt: 'Close-up of the ribbed charcoal cuff with its white hook-and-loop patch.' },
     { image: 'mitten-worn', title: 'Integrated mitten', text: 'Knit mitten coverage keeps the hand warm too.', alt: 'The knit mitten worn over the hand, with the thumb free.' },
   ],
   reuse: {
