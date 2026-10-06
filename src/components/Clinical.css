@@ -1,0 +1,256 @@
+.clinical {
+  background:
+    radial-gradient(50% 60% at 95% 0%, rgba(89, 53, 127, 0.45), transparent 70%),
+    radial-gradient(40% 50% at 0% 100%, rgba(9, 49, 180, 0.35), transparent 70%),
+    var(--navy);
+  color: #f3f1ee;
+  overflow: hidden;
+}
+
+.clinical .eyebrow {
+  color: #b7bdd3;
+}
+
+.clinical .lede {
+  color: #c9cde0;
+}
+
+.clinical .accent {
+  color: #ff8a6b;
+}
+
+.clinical__uses {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: clamp(48px, 6vw, 80px);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.clinical__uses li {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: clamp(24px, 3vw, 40px);
+  background: var(--navy-2);
+}
+
+.clinical__icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 12px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+  color: #ffb39e;
+}
+
+.clinical__icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.clinical__uses h3 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.clinical__uses p {
+  color: #c9cde0;
+}
+
+/* Journey */
+.clinical__journey {
+  margin-top: clamp(48px, 6vw, 72px);
+  padding: clamp(24px, 3.4vw, 44px);
+  border-radius: var(--r-lg);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.clinical__journey-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px 24px;
+}
+
+.clinical__journey-head h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: #fff;
+}
+
+.clinical__journey-head .mono {
+  font-size: 0.75rem;
+  color: #a9b0c8;
+}
+
+.clinical__track {
+  position: relative;
+  margin-top: 36px;
+}
+
+.clinical__band {
+  display: block;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: var(--thermal);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  transform-origin: left;
+  transition: transform 1.3s 0.2s var(--ease-out);
+}
+
+.js .clinical__journey:not(.is-in) .clinical__band {
+  transform: scaleX(0.04);
+}
+
+.clinical__track ol {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin-top: 18px;
+}
+
+.clinical__track li {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  text-align: center;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #e7e9f2;
+}
+
+.clinical__track li::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.clinical__track li:first-child::before {
+  left: 50%;
+}
+
+.clinical__track li:last-child::before {
+  right: 50%;
+}
+
+.clinical__node {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--navy);
+  box-shadow: inset 0 0 0 2px #ffb39e;
+}
+
+.clinical__audience {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.clinical__audience .mono {
+  margin-right: 6px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: #a9b0c8;
+}
+
+.clinical__tag {
+  padding: 8px 14px;
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+@media (max-width: 899px) {
+  .clinical__uses {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .clinical__uses li {
+    grid-template-columns: 52px minmax(0, 1fr);
+    column-gap: 18px;
+  }
+
+  .clinical__icon {
+    grid-row: span 2;
+    margin: 0;
+  }
+
+  .clinical__track {
+    display: grid;
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .clinical__band {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    padding: 16px 10px;
+    font-size: 0.75rem;
+    background: var(--thermal-v);
+    transform-origin: center;
+  }
+
+  .js .clinical__journey:not(.is-in) .clinical__band {
+    transform: rotate(180deg) scaleY(0.05);
+  }
+
+  .clinical__track ol {
+    grid-template-columns: minmax(0, 1fr);
+    margin: 0;
+    gap: 0;
+  }
+
+  .clinical__track li {
+    grid-template-columns: 15px minmax(0, 1fr);
+    justify-items: start;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 0;
+    text-align: left;
+  }
+
+  .clinical__track li::before,
+  .clinical__track li:first-child::before,
+  .clinical__track li:last-child::before {
+    top: 0;
+    bottom: 0;
+    left: 7px;
+    right: auto;
+    width: 1px;
+    height: auto;
+  }
+
+  .clinical__track li:first-child::before {
+    top: 50%;
+  }
+
+  .clinical__track li:last-child::before {
+    bottom: 50%;
+  }
+}

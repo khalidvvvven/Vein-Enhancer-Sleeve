@@ -1,0 +1,199 @@
+.how {
+  background: var(--surface);
+}
+
+.how__head {
+  margin-inline: auto;
+  text-align: center;
+  justify-items: center;
+}
+
+.how__steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 3vw, 40px);
+  margin-top: clamp(48px, 6vw, 80px);
+  counter-reset: step;
+}
+
+/* The track runs through the step numbers and warms from cobalt to signal red. */
+.how__track {
+  position: absolute;
+  left: calc(100% / 6);
+  right: calc(100% / 6);
+  top: calc(var(--visual-h) + 42px);
+  height: 2px;
+  border-radius: 2px;
+  background: var(--thermal);
+  transform-origin: left;
+  transition: transform 1.4s 0.2s var(--ease-out);
+}
+
+.js .how__steps:not(.is-in) .how__track {
+  transform: scaleX(0);
+}
+
+.how__steps {
+  --visual-h: clamp(220px, 22vw, 300px);
+}
+
+.how__step {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  text-align: center;
+}
+
+.how__visual {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: var(--visual-h);
+  border-radius: var(--r-lg);
+  background: var(--paper);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.how__step--1 .how__visual {
+  background: linear-gradient(180deg, #f1f3f8, #eef1f6);
+}
+
+.how__step--2 .how__visual {
+  background: linear-gradient(180deg, #f6f1f0, #f5eeea);
+}
+
+.how__step--3 .how__visual {
+  background: linear-gradient(180deg, #fbefe7, #f8e6da);
+}
+
+.how__glyph {
+  height: 92%;
+  width: auto;
+}
+
+.how__num {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-top: 20px;
+  border-radius: 50%;
+  background: var(--surface);
+  box-shadow:
+    0 0 0 2px var(--step-c),
+    0 6px 14px -6px rgba(17, 26, 51, 0.35);
+  font-size: 0.8125rem;
+  color: var(--ink);
+}
+
+.how__step--1 {
+  --step-c: var(--cobalt);
+}
+
+.how__step--2 {
+  --step-c: var(--wine);
+}
+
+.how__step--3 {
+  --step-c: var(--signal);
+}
+
+.how__step h3 {
+  margin-top: 18px;
+  font-size: 1.5rem;
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.how__step p {
+  max-width: 21em;
+  margin-top: 10px;
+  color: var(--ink-2);
+}
+
+.how__note {
+  max-width: 44em;
+  margin: clamp(40px, 5vw, 64px) auto 0;
+  padding: 14px 20px;
+  border-radius: var(--r-md);
+  background: var(--paper);
+  font-size: 0.875rem;
+  color: var(--ink-3);
+  text-align: center;
+}
+
+@media (max-width: 899px) {
+  .how__head {
+    text-align: left;
+    justify-items: start;
+    margin-inline: 0;
+  }
+
+  .how__steps {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    --visual-h: 0px;
+  }
+
+  .how__track {
+    left: 21px;
+    right: auto;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    height: auto;
+    background: var(--thermal-v);
+    transform-origin: top;
+  }
+
+  .js .how__steps:not(.is-in) .how__track {
+    transform: scaleY(0);
+  }
+
+  .how__step {
+    grid-template-columns: 44px minmax(0, 1fr);
+    grid-template-areas:
+      'num title'
+      'num text'
+      'num visual';
+    column-gap: 18px;
+    justify-items: start;
+    text-align: left;
+    padding-bottom: 32px;
+  }
+
+  .how__step:last-child {
+    padding-bottom: 0;
+  }
+
+  .how__num {
+    grid-area: num;
+    margin-top: 0;
+  }
+
+  .how__step h3 {
+    grid-area: title;
+    margin-top: 8px;
+  }
+
+  .how__step p {
+    grid-area: text;
+  }
+
+  .how__visual {
+    grid-area: visual;
+    height: 190px;
+    margin-top: 18px;
+    border-radius: var(--r-md);
+  }
+
+  .how__note {
+    text-align: left;
+    margin-inline: 0;
+  }
+}

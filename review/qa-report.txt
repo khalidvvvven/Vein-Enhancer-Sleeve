@@ -1,0 +1,88 @@
+
+=== 1440x900 ===
+console/network: clean
+images: 13 total, 0 not loaded 
+images missing alt attr: 0
+horizontal: scrollWidth 1440 vs 1440
+text < 11.5px: none
+axe: no violations
+
+=== 1024x768 ===
+console/network: clean
+images: 13 total, 0 not loaded 
+images missing alt attr: 0
+horizontal: scrollWidth 1024 vs 1024
+text < 11.5px: none
+axe: no violations
+
+=== 768x1024 ===
+console/network: clean
+images: 13 total, 0 not loaded 
+images missing alt attr: 0
+horizontal: scrollWidth 768 vs 768
+text < 11.5px: none
+axe: no violations
+
+=== 390x844 ===
+console/network: clean
+images: 13 total, 0 not loaded 
+images missing alt attr: 0
+horizontal: scrollWidth 390 vs 390
+text < 11.5px: none
+axe: no violations
+
+=== Heading outline ===
+  H1 Warm the hand and arm. Prepare for access.
+  H2 A warmer start to venous access.
+  H3 Cold constricts
+  H3 Warmth is studied
+  H3 Coverage matters
+  H2 Three steps to a warmer start.
+  H3 Step 1: Position
+  H3 Step 2: Warm
+  H3 Step 3: Prepare
+  H2 One piece, from upper arm to hand.
+  H3 Velcro securing strap
+  H3 Upper-arm cuff
+  H3 Heat-pack pouches
+  H3 Full arm coverage
+  H3 Integrated mitten
+  H2 Designed for the realities of clinical care.
+  H3 Blood draws
+  H3 IV placement
+  H3 Inpatient stays
+  H3 One patient, one sleeve — for the whole stay
+  H2 Comfort before the needle.
+  H3 Soft, familiar materials
+  H3 Warmth that includes the hand
+  H3 Calm, not clinical
+  H2 Made from soft, familiar materials.
+  H2 The science behind warming.
+  H2 A simple warming solution, designed around better preparatio
+
+=== Links ===
+  internal anchors: #main #top #product #how-it-works #features #research
+  missing targets: none
+  external: https://doi.org/10.1186/s40101-023-00340-5 https://pubmed.ncbi.nlm.nih.gov/31600031/
+
+=== Keyboard tab order (first 12) ===
+  a.skip-link "Skip to content" outline=solid/3px
+  a.site-header__logo "WARMUP Vein Enhancer Sleeve " outline=solid/3px
+  a "Product" outline=solid/3px
+  a "How it works" outline=solid/3px
+  a "Features" outline=solid/3px
+  a "Research" outline=solid/3px
+  a.site-header__cta "Learn about WARMUP" outline=solid/3px
+  a.btn "See how it works" outline=solid/3px
+  a.text-link "Read the research" outline=solid/3px
+  summary "01A comparative study on imp" outline=solid/3px
+  summary "02The Impact of Dry Versus M" outline=solid/3px
+  summary "03Venous dilation effect of " outline=solid/3px
+
+=== Accordion === Enter opens first reference: true
+
+=== Mobile menu === opens: true, Escape closes: true, focus returns to toggle: true, closes after link: true, scrolled to #research: true
+
+=== Reduced motion === [data-reveal] elements not fully visible: 0
+
+=== No-JS === main text characters rendered: 6976

@@ -1,0 +1,133 @@
+.closing {
+  background:
+    radial-gradient(60% 60% at 50% 70%, rgba(243, 176, 140, 0.45), transparent 70%),
+    linear-gradient(180deg, var(--paper) 0%, var(--warm-1) 100%);
+  overflow: hidden;
+}
+
+.closing::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  background: var(--thermal);
+}
+
+.closing__head {
+  display: grid;
+  justify-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.closing__title {
+  max-width: 17em;
+}
+
+.closing__title .accent {
+  display: block;
+}
+
+.closing__views {
+  display: grid;
+  grid-template-columns: minmax(0, 0.24fr) minmax(0, 1fr);
+  align-items: end;
+  gap: clamp(24px, 4vw, 64px);
+  max-width: 1120px;
+  margin: clamp(48px, 6vw, 80px) auto 0;
+}
+
+.closing__view {
+  display: grid;
+  justify-items: center;
+  gap: 18px;
+}
+
+.closing__frame {
+  display: grid;
+  place-items: end center;
+  width: 100%;
+}
+
+.closing__view--worn .closing__frame picture {
+  width: min(170px, 100%);
+}
+
+.closing__view--flat .closing__frame picture {
+  width: 100%;
+}
+
+.closing__frame picture {
+  filter: drop-shadow(0 30px 30px rgba(110, 50, 25, 0.2)) drop-shadow(0 4px 6px rgba(110, 50, 25, 0.1));
+}
+
+.closing__frame img {
+  width: 100%;
+}
+
+.closing__view--worn img {
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 7%);
+  mask-image: linear-gradient(180deg, transparent 0%, #000 7%);
+}
+
+.closing__view figcaption {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-3);
+}
+
+.closing__view figcaption::before {
+  content: '';
+  width: 18px;
+  height: 1px;
+  background: var(--ink-3);
+}
+
+.closing__summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 880px;
+  margin: clamp(40px, 5vw, 64px) auto 0;
+}
+
+.closing__summary li {
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: inset 0 0 0 1px var(--line);
+  font-size: 0.9375rem;
+  font-weight: 540;
+}
+
+.closing__top {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.closing__top .btn__icon {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 599px) {
+  .closing__views {
+    grid-template-columns: 96px minmax(0, 1fr);
+    gap: 16px;
+    align-items: center;
+  }
+
+  .closing__summary {
+    justify-content: flex-start;
+  }
+
+  .closing__summary li {
+    font-size: 0.875rem;
+  }
+}

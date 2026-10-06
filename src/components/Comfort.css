@@ -1,0 +1,121 @@
+.comfort {
+  background:
+    radial-gradient(60% 70% at 15% 55%, rgba(243, 176, 140, 0.45), transparent 70%),
+    linear-gradient(180deg, var(--warm-1) 0%, #f6e4d8 100%);
+  overflow: hidden;
+}
+
+.comfort__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(40px, 7vw, 120px);
+}
+
+.comfort__visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 520px;
+}
+
+.comfort__halo {
+  position: absolute;
+  width: min(520px, 100%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(closest-side, rgba(231, 61, 33, 0.22), rgba(231, 61, 33, 0.06) 60%, transparent 100%);
+}
+
+.comfort__halo::before,
+.comfort__halo::after {
+  content: '';
+  position: absolute;
+  inset: 12%;
+  border-radius: 50%;
+  border: 1px solid rgba(181, 48, 27, 0.18);
+}
+
+.comfort__halo::after {
+  inset: 26%;
+  border-color: rgba(181, 48, 27, 0.26);
+}
+
+.comfort__img {
+  position: relative;
+  width: min(380px, 78%);
+  filter: drop-shadow(0 34px 40px rgba(110, 50, 25, 0.25));
+}
+
+.comfort__img img {
+  width: 100%;
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 22%);
+  mask-image: linear-gradient(180deg, transparent 0%, #000 22%);
+}
+
+.comfort__copy {
+  display: grid;
+  gap: 22px;
+}
+
+.comfort__body {
+  max-width: 34em;
+  font-size: 1.125rem;
+  color: var(--ink-2);
+}
+
+.comfort__statement {
+  max-width: 18em;
+  padding-left: 22px;
+  border-left: 3px solid var(--signal);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.6rem, 1.2rem + 1.2vw, 2.1rem);
+  line-height: 1.15;
+  color: var(--ink);
+}
+
+.comfort__points {
+  display: grid;
+  gap: 0;
+  margin-top: 6px;
+  border-top: 1px solid rgba(17, 26, 51, 0.14);
+}
+
+.comfort__points li {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 8px 24px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(17, 26, 51, 0.14);
+}
+
+.comfort__points h3 {
+  font-size: 1.0625rem;
+  font-weight: 620;
+  letter-spacing: -0.01em;
+}
+
+.comfort__points p {
+  color: var(--ink-2);
+}
+
+@media (max-width: 899px) {
+  .comfort__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .comfort__visual {
+    order: 2;
+    min-height: 380px;
+  }
+
+  .comfort__img {
+    width: min(300px, 70%);
+  }
+
+  .comfort__points li {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

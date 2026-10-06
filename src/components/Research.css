@@ -1,0 +1,254 @@
+.research {
+  background: var(--surface);
+}
+
+.research__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(40px, 6vw, 96px);
+  align-items: start;
+}
+
+.research__intro {
+  position: sticky;
+  top: calc(var(--header-h) + 32px);
+  display: grid;
+  gap: 22px;
+}
+
+.research__body {
+  color: var(--ink-2);
+}
+
+.research__topics-label {
+  margin-bottom: 12px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-3);
+}
+
+.research__topics ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.research__topics li {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 8px 7px 14px;
+  border-radius: 999px;
+  background: var(--paper);
+  box-shadow: inset 0 0 0 1px var(--line);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.research__topics li .mono {
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--surface);
+  font-size: 0.75rem;
+  color: var(--signal-ink);
+}
+
+.research__disclaimer {
+  padding: 16px 18px;
+  border-radius: var(--r-md);
+  background: var(--paper);
+  border-left: 3px solid var(--violet);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+
+/* References */
+.research__refs {
+  border-top: 1px solid var(--line-2);
+}
+
+.research__refs > li {
+  border-bottom: 1px solid var(--line-2);
+}
+
+.ref summary {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) 40px;
+  gap: 16px;
+  align-items: start;
+  padding: 26px 0;
+  cursor: pointer;
+  list-style: none;
+  border-radius: var(--r-sm);
+}
+
+.ref summary:focus-visible {
+  outline-offset: -2px;
+}
+
+.ref summary::-webkit-details-marker {
+  display: none;
+}
+
+.ref__n {
+  padding-top: 3px;
+  font-size: 0.8125rem;
+  color: var(--signal-ink);
+}
+
+.ref__main {
+  display: grid;
+  gap: 8px;
+}
+
+.ref__title {
+  font-size: 1.125rem;
+  font-weight: 580;
+  line-height: 1.35;
+  letter-spacing: -0.012em;
+  color: var(--ink);
+  text-wrap: pretty;
+}
+
+.ref__meta {
+  font-size: 0.9375rem;
+  color: var(--ink-3);
+  text-wrap: pretty;
+}
+
+.ref__source {
+  font-style: italic;
+}
+
+.ref__toggle {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1.5px var(--line-2);
+  transition:
+    transform 0.35s var(--ease-out),
+    background-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.ref__toggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+.ref summary:hover .ref__toggle {
+  box-shadow: inset 0 0 0 1.5px var(--ink);
+}
+
+.ref[open] .ref__toggle {
+  transform: rotate(45deg);
+  background: var(--ink);
+  color: #fff;
+  box-shadow: none;
+}
+
+.ref__details {
+  display: grid;
+  gap: 18px;
+  margin: 4px 0 0 60px;
+  padding: 0 56px 28px 0;
+  animation: ref-open 0.4s var(--ease-out);
+}
+
+.ref__details dl {
+  display: grid;
+  gap: 12px;
+}
+
+.ref__details dl > div {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 16px;
+}
+
+.ref__details dt {
+  padding-top: 2px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-3);
+}
+
+.ref__details dd {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--ink-2);
+}
+
+.ref__link {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: var(--paper);
+  box-shadow: inset 0 0 0 1px var(--line-2);
+  font-size: 0.9375rem;
+  font-weight: 560;
+  text-decoration: none;
+  transition: box-shadow 0.2s;
+}
+
+.ref__link:hover {
+  box-shadow: inset 0 0 0 1.5px var(--ink);
+}
+
+.ref__link-icon {
+  width: 16px;
+  height: 16px;
+}
+
+@keyframes ref-open {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}
+
+@media (max-width: 899px) {
+  .research__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .research__intro {
+    position: static;
+  }
+}
+
+@media (max-width: 599px) {
+  .ref summary {
+    grid-template-columns: minmax(0, 1fr) 40px;
+    gap: 8px 14px;
+    padding: 22px 0;
+  }
+
+  .ref__n {
+    grid-column: 1 / -1;
+    padding: 0;
+  }
+
+  .ref__title {
+    font-size: 1.0625rem;
+  }
+
+  .ref__details {
+    margin-left: 0;
+    padding-right: 0;
+  }
+
+  .ref__details dl > div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4px;
+  }
+}

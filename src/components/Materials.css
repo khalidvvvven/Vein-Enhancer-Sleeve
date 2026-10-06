@@ -1,0 +1,124 @@
+.materials {
+  background: var(--paper);
+}
+
+.materials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 28px);
+  margin-top: clamp(48px, 6vw, 72px);
+}
+
+.swatch figure {
+  display: grid;
+  gap: 16px;
+}
+
+.swatch__img {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  background: #ede7dd;
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.swatch__img picture,
+.swatch__img img {
+  width: 100%;
+  height: 100%;
+}
+
+.swatch__img img {
+  object-fit: cover;
+  transition: transform 1.2s var(--ease-out);
+}
+
+.swatch:hover .swatch__img img {
+  transform: scale(1.04);
+}
+
+.swatch--mitten-worn .swatch__img {
+  background: radial-gradient(70% 70% at 50% 55%, #f6dccd, #ede4d8);
+}
+
+.swatch--mitten-worn .swatch__img img {
+  object-fit: contain;
+  object-position: 50% 100%;
+  padding-top: 12px;
+  -webkit-mask-image: linear-gradient(180deg, transparent 4%, #000 30%);
+  mask-image: linear-gradient(180deg, transparent 4%, #000 30%);
+}
+
+.swatch figcaption {
+  display: grid;
+  gap: 4px;
+  padding-inline: 4px;
+}
+
+.swatch figcaption .mono {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-3);
+}
+
+.swatch figcaption strong {
+  font-size: 1.125rem;
+  font-weight: 620;
+  letter-spacing: -0.015em;
+}
+
+.swatch figcaption span:last-child {
+  color: var(--ink-2);
+  font-size: 0.9375rem;
+}
+
+.swatch__reuse {
+  display: grid;
+  align-content: end;
+  gap: 10px;
+  height: 100%;
+  min-height: 260px;
+  padding: clamp(24px, 3vw, 36px);
+  border-radius: var(--r-lg);
+  background:
+    radial-gradient(80% 80% at 100% 0%, rgba(231, 61, 33, 0.25), transparent 70%),
+    var(--ink);
+  color: #fff;
+}
+
+.swatch__reuse-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: auto;
+  color: #ffb39e;
+}
+
+.swatch__reuse strong {
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.swatch__reuse p {
+  color: #c9cde0;
+}
+
+@media (max-width: 899px) {
+  .materials__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 599px) {
+  .materials__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .swatch__reuse {
+    min-height: 220px;
+  }
+}
