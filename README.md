@@ -26,7 +26,7 @@ The WARMUP logo runs cobalt → violet → wine → signal red, which is a cold-
 ## Sections
 
 1. Header: logo, Product / How it works / Features / Research, mobile menu
-2. Hero: worn-arm photo with callouts (Velcro strap, heat-pack pouch, **integrated mitten**) and a hand-to-upper-arm coverage rail
+2. Hero: worn-arm photo with callouts (hook-and-loop strap, heat-pack pouch, **integrated mitten**) and a hand-to-upper-arm coverage rail
 3. Why warmth (`#product`): principle, illustrative cool-vs-warm vein cross-section (clearly captioned)
 4. How it works: Position → Warm → Prepare, with schematic drawings that warm up step by step
 5. Anatomy (`#features`): flat-lay photo with five engineered callouts plus an "as worn" mitten inset

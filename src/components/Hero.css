@@ -144,7 +144,7 @@
    Product stage
 ------------------------------------------------------------------- */
 .hero__panel {
-  --panel-h: clamp(540px, calc(100svh - var(--header-h) - 130px), 700px);
+  --panel-h: clamp(540px, calc(var(--svh) * 100 - var(--header-h) - 130px), 700px);
   --arm-h: calc(var(--panel-h) * 1.04);
   --arm-w: calc(var(--arm-h) * 0.2828);
   --arm-left: 22cqi;
@@ -434,7 +434,7 @@
   }
 
   .hero__panel {
-    --panel-h: clamp(520px, calc(100svh - var(--header-h) - 120px), 620px);
+    --panel-h: clamp(520px, calc(var(--svh) * 100 - var(--header-h) - 120px), 620px);
     --arm-left: 15cqi;
     --reach: 26px;
   }
@@ -510,15 +510,27 @@
 
 @media (max-width: 599px) {
   .hero {
-    padding-top: calc(var(--header-h) + 20px);
+    padding-top: calc(var(--header-h) + 12px);
+    padding-bottom: 36px;
   }
 
   .hero__grid {
-    row-gap: 22px;
+    row-gap: 14px;
   }
 
   .hero__eyebrow {
-    margin-bottom: 16px;
+    margin-bottom: 12px;
+    font-size: 0.8125rem;
+  }
+
+  .hero__badge {
+    gap: 8px;
+    padding: 4px 12px 4px 9px;
+  }
+
+  .hero__badge::before {
+    width: 9px;
+    height: 9px;
   }
 
   .hero__eyebrow-note {
@@ -526,15 +538,19 @@
   }
 
   .hero__title {
-    font-size: clamp(2.35rem, 1.2rem + 5.6vw, 3rem);
+    font-size: clamp(2rem, 1rem + 4.9vw, 2.5rem);
   }
 
+  /* Fit the product panel to the visible viewport (svh excludes browser
+     toolbars) so the arm and integrated mitten are in the first screen. */
   .hero__panel {
-    --panel-h: 420px;
-    --arm-left: 19cqi;
+    --panel-h: clamp(300px, calc(var(--svh) * 100 - 290px), 392px);
+    --arm-h: calc(var(--panel-h) - 4px);
+    --arm-left: 15cqi;
     --reach: 20px;
   }
 
+  /* Whole hand (thumb + fingertips) sits inside the panel. */
   .hero__arm {
     top: -8px;
   }
@@ -551,16 +567,22 @@
     font-size: 0.9375rem;
   }
 
+  /* Short titles only; the mitten keeps its note. */
+  .callout:not(.callout--emphasis) .callout__label span {
+    display: none;
+  }
+
   .hero__caption {
-    margin-top: 10px;
+    margin-top: 8px;
   }
 
   .hero__body {
     display: block;
+    margin-top: 6px;
   }
 
   .hero__ctas {
-    margin-top: 24px;
+    margin-top: 22px;
   }
 
   .hero__ctas .btn {
@@ -568,6 +590,6 @@
   }
 
   .hero__facts {
-    margin-top: 32px;
+    margin-top: 28px;
   }
 }

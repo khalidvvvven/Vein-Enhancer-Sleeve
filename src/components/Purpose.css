@@ -201,3 +201,9 @@
     gap: 28px;
   }
 }
+
+@media (max-width: 599px) {
+  .purpose {
+    padding-top: 64px;
+  }
+}

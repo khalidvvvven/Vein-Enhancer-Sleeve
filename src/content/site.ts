@@ -1,6 +1,8 @@
 // All page copy lives here so it can be edited without touching layout code.
 // Claims are deliberately conservative: describe design intent and what has been
 // studied — never outcomes, statistics, endorsements or certifications.
+// Fastener wording is the generic "hook-and-loop"; switch to "Velcro®" only if the
+// client confirms the product uses the Velcro brand.
 
 export const site = {
   name: 'WARMUP',
@@ -26,18 +28,18 @@ export const hero = {
   facts: [
     { label: 'Coverage', value: 'Hand to upper arm' },
     { label: 'Warmth', value: 'Heat-pack pouches' },
-    { label: 'Fit', value: 'Velcro securing strap' },
+    { label: 'Fit', value: 'Hook-and-loop strap' },
   ],
   // Positions are percentages of the worn-arm photograph.
   callouts: [
-    { title: 'Velcro strap', note: 'Secures at the upper arm', x: 71, y: 8 },
+    { title: 'Hook-and-loop strap', note: 'Secures at the upper arm', x: 71, y: 8 },
     { title: 'Heat-pack pouch', note: 'Holds warmth against the arm', x: 79, y: 26 },
     { title: 'Integrated mitten', note: 'Covers the hand', x: 62, y: 87, emphasis: true },
   ],
   rail: { top: 'Upper arm', bottom: 'Hand' },
   caption: 'Shown worn on the left arm, with the mitten over the hand.',
   imageAlt:
-    'The WARMUP sleeve worn on a left arm: a charcoal knit cuff with a Velcro strap at the upper arm, a cream fleece body with a heat-pack pouch, and a charcoal knit mitten covering the hand with the thumb free.',
+    'The WARMUP sleeve worn on a left arm: a charcoal knit cuff with a hook-and-loop strap at the upper arm, a cream fleece body with a heat-pack pouch, and a charcoal knit mitten covering the hand with the thumb free.',
 };
 
 export const purpose = {
@@ -79,7 +81,7 @@ export const howItWorks = {
     {
       n: '01',
       title: 'Position',
-      text: 'Slide the sleeve onto the patient’s arm so the mitten covers the hand, then fasten the Velcro strap at the upper arm.',
+      text: 'Slide the sleeve onto the patient’s arm so the mitten covers the hand, then fasten the hook-and-loop strap at the upper arm.',
     },
     {
       n: '02',
@@ -114,11 +116,11 @@ export const anatomy = {
   titleAccent: 'upper arm to hand.',
   lede: 'A secure cuff, warming pouches, a soft fleece body and an integrated mitten — each part has a job in preparing the limb.',
   imageAlt:
-    'The WARMUP sleeve laid flat: a ribbed charcoal upper-arm cuff with a white Velcro patch and attached strap on the left, a cream fleece body with a stitched heat-pack pouch and slot opening in the middle, and a ribbed charcoal knit mitten on the right.',
+    'The WARMUP sleeve laid flat: a ribbed charcoal upper-arm cuff with a white hook-and-loop patch and attached strap on the left, a cream fleece body with a stitched heat-pack pouch and slot opening in the middle, and a ribbed charcoal knit mitten on the right.',
   features: [
     {
       n: 1,
-      title: 'Velcro securing strap',
+      title: 'Hook-and-loop strap',
       short: 'Strap',
       text: 'An attached strap fastens around the upper arm to hold the sleeve in place.',
       x: 15,
@@ -129,7 +131,7 @@ export const anatomy = {
       n: 2,
       title: 'Upper-arm cuff',
       short: 'Cuff',
-      text: 'A ribbed knit cuff with a Velcro patch where the strap closes for a secure fit.',
+      text: 'A ribbed knit cuff with a hook-and-loop patch where the strap closes for a secure fit.',
       x: 8.5,
       y: 62,
       side: 'bottom',
@@ -226,12 +228,12 @@ export const materials = {
   eyebrow: 'Materials & construction',
   title: 'Made from soft,',
   titleAccent: 'familiar materials.',
-  lede: 'High-quality fleece and cotton, a Velcro securing strap and a pocket system for heat packs — built to stay with the patient.',
+  lede: 'High-quality fleece and cotton, a hook-and-loop securing strap and a pocket system for heat packs — built to stay with the patient.',
   swatches: [
     { image: 'detail-fleece', title: 'Fleece body', text: 'Soft brushed fleece wraps the forearm, elbow and upper arm.', alt: 'Close-up of the cream brushed fleece of the sleeve body.' },
     { image: 'detail-pouch', title: 'Heat-pack pocket', text: 'A stitched pouch with a slot opening holds heat packs.', alt: 'Close-up of the stitched fleece pouch with its charcoal-lined slot opening.' },
-    { image: 'detail-strap', title: 'Velcro strap', text: 'An attached strap secures the sleeve at the upper arm.', alt: 'Close-up of the charcoal strap with white Velcro attached to the sleeve.' },
-    { image: 'detail-cuff', title: 'Ribbed cuff', text: 'Stretch knit cuff with a Velcro patch for a secure fit.', alt: 'Close-up of the ribbed charcoal cuff with its white Velcro patch.' },
+    { image: 'detail-strap', title: 'Hook-and-loop strap', text: 'An attached strap secures the sleeve at the upper arm.', alt: 'Close-up of the charcoal strap with white hook-and-loop fastening, attached to the sleeve.' },
+    { image: 'detail-cuff', title: 'Ribbed cuff', text: 'Stretch knit cuff with a hook-and-loop patch for a secure fit.', alt: 'Close-up of the ribbed charcoal cuff with its white hook-and-loop patch.' },
     { image: 'mitten-worn', title: 'Integrated mitten', text: 'Knit mitten coverage keeps the hand warm too.', alt: 'The knit mitten worn over the hand, with the thumb free.' },
   ],
   reuse: {
@@ -326,7 +328,7 @@ export const closing = {
   eyebrow: 'WARMUP Vein Enhancer Sleeve',
   title: 'A simple warming solution,',
   titleAccent: 'designed around better preparation.',
-  summary: ['Hand + arm coverage', 'Integrated mitten', 'Heat-pack pouches', 'Velcro securing strap', 'Fleece & cotton', 'Reusable during inpatient stay'],
+  summary: ['Hand + arm coverage', 'Integrated mitten', 'Heat-pack pouches', 'Hook-and-loop strap', 'Fleece & cotton', 'Reusable during inpatient stay'],
   wornLabel: 'As worn',
   flatLabel: 'Laid flat',
   wornAlt: 'The WARMUP sleeve worn on the arm with the mitten over the hand.',

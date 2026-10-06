@@ -45,7 +45,7 @@ export function ArmGlyph({ stage, className }: Props) {
 
       {/* upper-arm cuff (knit) */}
       <path d="M58 10 H142 L139 44 H61 Z" fill={knit} stroke="#2b3046" strokeWidth="1.6" />
-      {/* Velcro strap across the cuff */}
+      {/* hook-and-loop strap across the cuff */}
       <rect x="66" y="20" width="44" height="13" rx="2.5" fill="#eef0f6" stroke={stage === 1 ? '#0931b4' : '#2b3046'} strokeWidth={stage === 1 ? 2 : 1.2} />
 
       {/* heat-pack pouch with slot */}
